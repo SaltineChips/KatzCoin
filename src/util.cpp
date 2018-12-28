@@ -83,7 +83,7 @@ bool fLiteMode = false;
 bool fEnableInstantX = true;
 int nInstantXDepth = 10;
 int nMNengineRounds = 2;
-int nAnonymizeEndoxCoinAmount = 1000;
+int nAnonymizeKatzCoinAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
@@ -1073,7 +1073,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "Endox-Coin";
+    const char* pszModule = "Katz-Coin";
 #endif
     if (pex)
         return strprintf(
@@ -1103,13 +1103,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\ENDOX
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\ENDOX
-    // Mac: ~/Library/Application Support/ENDOX
-    // Unix: ~/.ENDOX
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\KATZ
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\KATZ
+    // Mac: ~/Library/Application Support/KATZ
+    // Unix: ~/.KATZ
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "ENDOX";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "KATZ";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1121,10 +1121,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "ENDOX";
+    return pathRet / "KATZ";
 #else
     // Unix
-    return pathRet / ".ENDOX";
+    return pathRet / ".KATZ";
 #endif
 #endif
 }
@@ -1173,7 +1173,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "Endox-Coin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "Katz-Coin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1194,7 +1194,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     if (!streamConfig.good())
     {
         boost::filesystem::path ConfPath;
-               ConfPath = GetDataDir() / "Endox-Coin.conf";
+               ConfPath = GetDataDir() / "Katz-Coin.conf";
                FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
                fprintf(ConfFile, "listen=1\n");
                fprintf(ConfFile, "server=1\n");
@@ -1209,8 +1209,8 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
                std::string str(s, 32);
                fprintf(ConfFile, "rpcpassword=%s\n", str.c_str());
-               fprintf(ConfFile, "port=51441\n");
-               fprintf(ConfFile, "rpcport=51221\n");
+               fprintf(ConfFile, "port=44412\n");
+               fprintf(ConfFile, "rpcport=44526\n");
                fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
                fprintf(ConfFile, "rpcallowip=127.0.0.1\n");
               // fprintf(ConfFile, "addnode=cryptonode.online\n");
@@ -1250,7 +1250,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "Endox-Coind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "Katz-Coind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1411,7 +1411,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Endox-Coin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Katz-Coin will not work properly.");
                     strMiscWarning = strMessage;
                     LogPrintf("*** %s\n", strMessage);
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);

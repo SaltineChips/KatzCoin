@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Endox-Coin</source>
-        <translation>Acerca de Endox-Coin</translation>
+        <source>About Katz-Coin</source>
+        <translation>Acerca de Katz-Coin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Endox-Coin&lt;/b&gt; version</source>
-        <translation>Versión &lt;b&gt;Endox-Coin&lt;/b&gt; .</translation>
+        <source>&lt;b&gt;Katz-Coin&lt;/b&gt; version</source>
+        <translation>Versión &lt;b&gt;Katz-Coin&lt;/b&gt; .</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Endox-Coin developers</source>
+Copyright © 2014 The Katz-Coin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -58,8 +58,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Endox-Coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son as túas dIreccións de Endox-Coin para recibir os pagos. Pode que quieras asignarlle unha a cada remitente e así reconocer quen te está a pagar.</translation>
+        <source>These are your Katz-Coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estas son as túas dIreccións de Katz-Coin para recibir os pagos. Pode que quieras asignarlle unha a cada remitente e así reconocer quen te está a pagar.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -73,8 +73,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Endox-Coin address</source>
-        <translation>Firma a mensaxe para probar que tes unha dirección Endox-Coin</translation>
+        <source>Sign a message to prove you own a Katz-Coin address</source>
+        <translation>Firma a mensaxe para probar que tes unha dirección Katz-Coin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -88,8 +88,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Endox-Coin address</source>
-        <translation>Verifica a mensaxe para asegurar que foi asinada por unha concreta dirección de Endox-Coin</translation>
+        <source>Verify a message to ensure it was signed with a specified Katz-Coin address</source>
+        <translation>Verifica a mensaxe para asegurar que foi asinada por unha concreta dirección de Katz-Coin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -256,8 +256,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Endox-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Endox-Coin pecharase agora para rematar o proceso de encriptación. Recorda que encriptar a túa carteira non te protexe na totalidade do roubo das tuas moedas por infeccións de malware no teu ordenador.</translation>
+        <source>Katz-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Katz-Coin pecharase agora para rematar o proceso de encriptación. Recorda que encriptar a túa carteira non te protexe na totalidade do roubo das tuas moedas por infeccións de malware no teu ordenador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -302,7 +302,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>EndoxCoinGUI</name>
+    <name>KatzCoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -350,8 +350,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Endox-Coin</source>
-        <translation>Amosa información sobre Endox-Coin</translation>
+        <source>Show information about Katz-Coin</source>
+        <translation>Amosa información sobre Katz-Coin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -390,13 +390,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Endox-Coin address</source>
-        <translation>Enviar moedas a unha dirección Endox-Coin</translation>
+        <source>Send coins to a Katz-Coin address</source>
+        <translation>Enviar moedas a unha dirección Katz-Coin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Endox-Coin</source>
-        <translation>Modificar opcións de configuración para Endox-Coin</translation>
+        <source>Modify configuration options for Katz-Coin</source>
+        <translation>Modificar opcións de configuración para Katz-Coin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -436,8 +436,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Endox-Coin</source>
-        <translation>Endox-Coin</translation>
+        <source>Katz-Coin</source>
+        <translation>Katz-Coin</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -446,8 +446,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Endox-Coin</source>
-        <translation>&amp;Sobre Endox-Coin</translation>
+        <source>&amp;About Katz-Coin</source>
+        <translation>&amp;Sobre Katz-Coin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -498,13 +498,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Endox-Coin client</source>
-        <translation>Cliente Endox-Coin</translation>
+        <source>Katz-Coin client</source>
+        <translation>Cliente Katz-Coin</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Endox-Coin network</source>
-        <translation><numerusform>%n conexión activa á red de Endox-Coin</numerusform><numerusform>%n conexións activas á red de Endox-Coin</numerusform></translation>
+        <source>%n active connection(s) to Katz-Coin network</source>
+        <translation><numerusform>%n conexión activa á red de Katz-Coin</numerusform><numerusform>%n conexións activas á red de Katz-Coin</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -598,7 +598,7 @@ Dirección: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Endox-Coin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Katz-Coin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -721,7 +721,7 @@ Dirección: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Endox-Coin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Katz-Coin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1041,7 +1041,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Endox-Coin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Katz-Coin address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1060,8 +1060,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Endox-Coin-Qt</source>
-        <translation>Endox-Coin-Qt</translation>
+        <source>Katz-Coin-Qt</source>
+        <translation>Katz-Coin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1133,12 +1133,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Endox-Coin after logging in to the system.</source>
+        <source>Automatically start Katz-Coin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Endox-Coin on system login</source>
+        <source>&amp;Start Katz-Coin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1148,7 +1148,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Endox-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Katz-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1158,7 +1158,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Endox-Coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the Katz-Coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1233,7 +1233,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Endox-Coin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Katz-Coin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1300,7 +1300,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Endox-Coin.</source>
+        <source>This setting will take effect after restarting Katz-Coin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1319,7 +1319,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Endox-Coin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Katz-Coin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1393,7 +1393,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Endox-Coin: click-to-pay handler</source>
+        <source>Cannot start Katz-Coin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1561,7 +1561,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Endox-Coin-Qt help message to get a list with possible Endox-Coin command-line options.</source>
+        <source>Show the Katz-Coin-Qt help message to get a list with possible Katz-Coin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1581,12 +1581,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>Endox-Coin - Debug window</source>
+        <source>Katz-Coin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Endox-Coin Core</source>
+        <source>Katz-Coin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1596,7 +1596,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Endox-Coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Katz-Coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1606,7 +1606,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Endox-Coin RPC console.</source>
+        <source>Welcome to the Katz-Coin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1800,7 +1800,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1900,7 +1900,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Endox-Coin address</source>
+        <source>WARNING: Invalid Katz-Coin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1974,7 +1974,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2035,7 +2035,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Endox-Coin address</source>
+        <source>Sign the message to prove you own this Katz-Coin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2067,7 +2067,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Endox-Coin address</source>
+        <source>Verify the message to ensure it was signed with the specified Katz-Coin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2078,7 +2078,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2088,7 +2088,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Endox-Coin signature</source>
+        <source>Enter Katz-Coin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2667,7 +2667,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Endox-Coin version</source>
+        <source>Katz-Coin version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2677,7 +2677,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Endox-Coind</source>
+        <source>Send command to -server or Katz-Coind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2697,12 +2697,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Endox-Coin.conf)</source>
+        <source>Specify configuration file (default: Katz-Coin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Endox-Coind.pid)</source>
+        <source>Specify pid file (default: Katz-Coind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2720,13 +2720,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Endox-Coinrpc
+rpcuser=Katz-Coinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Katz-Coin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2832,7 +2832,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Endox-Coin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Katz-Coin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2907,8 +2907,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the EndoxCoin Wiki for SSL setup instructions)</source>
-        <translation>Opcións SSL: (ver ńa Wiki EndoxCoin as instrucción de configuración de SSL)</translation>
+        <source>SSL options: (see the KatzCoin Wiki for SSL setup instructions)</source>
+        <translation>Opcións SSL: (ver ńa Wiki KatzCoin as instrucción de configuración de SSL)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3138,7 +3138,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Endox-Coin is shutting down.</source>
+        <source>Initialization sanity check failed. Katz-Coin is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3203,12 +3203,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Endox-Coin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Katz-Coin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Endox-Coin to complete</source>
+        <source>Wallet needed to be rewritten: restart Katz-Coin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3273,7 +3273,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Endox-Coin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Katz-Coin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3313,7 +3313,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Endox-Coin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Katz-Coin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -1,21 +1,21 @@
-Endox-Coin [ENDOX] integration/staging tree
+Katz-Coin [KATZ] integration/staging tree
 =====================================
 
-http://www.endox-coincoin.com
+http://www.katz-coincoin.com
 
-What is the Endox-Coin [ENDOX] Blockchain?
+What is the Katz-Coin [KATZ] Blockchain?
 ---------------------------
 
-The Endox-Coin [ENDOX] Blockchain is an experimental smart contract platform protocol that enables 
+The Katz-Coin [KATZ] Blockchain is an experimental smart contract platform protocol that enables 
 instant payments to anyone, anywhere in the world in a private, secure manner. 
-Endox-Coin [ENDOX] uses peer-to-peer blockchain technology developed by EndoxCoin to operate
+Katz-Coin [KATZ] uses peer-to-peer blockchain technology developed by KatzCoin to operate
 with no central authority: managing transactions, execution of contracts, and 
-issuing money are carried out collectively by the network. Endox-Coin [ENDOX] is the name of 
+issuing money are carried out collectively by the network. Katz-Coin [KATZ] is the name of 
 open source software which enables the use of this protocol.
 
 Specifications and General info
 ------------------
-Endox-Coin uses libsecp256k1,
+Katz-Coin uses libsecp256k1,
 			  libgmp,
 			  Boost1.63,
 			  OR Boost1.57,  
@@ -33,30 +33,30 @@ RPC Port: 10257
 
 BUILD LINUX
 -----------
-1) git clone https://github.com/CryptoCoderz/ENDOX
+1) git clone https://github.com/CryptoCoderz/KATZ
 
-2) cd ENDOX/src
+2) cd KATZ/src
 
 3) sudo make -f makefile.unix            # Headless
 
 (optional)
 
-4) strip Endox-Coind
+4) strip Katz-Coind
 
-5) sudo cp Endox-Coind /usr/local/bin
+5) sudo cp Katz-Coind /usr/local/bin
 
 License
 -------
 
-Endox-Coin [ENDOX] is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Katz-Coin [KATZ] is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/CryptoCoderz/ENDOX/tags) are created
-regularly to indicate new official, stable release versions of Endox-Coin [ENDOX].
+completely stable. [Tags](https://github.com/CryptoCoderz/KATZ/tags) are created
+regularly to indicate new official, stable release versions of Katz-Coin [KATZ].
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -64,7 +64,7 @@ The developer [mailing list](https://lists.linuxfoundation.org/mailman/listinfo/
 should be used to discuss complicated or controversial changes before working
 on a patch set.
 
-Developer Slack can be found at http://endox-coincointeam.slack.com.
+Developer Slack can be found at http://katz-coincointeam.slack.com.
 
 Testing
 -------

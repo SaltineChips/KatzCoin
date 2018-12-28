@@ -92,23 +92,23 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Endox-Coin addresses.
+/** base58-encoded Katz-Coin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CEndoxCoinAddress : public CBase58Data {
+class CKatzCoinAddress : public CBase58Data {
 public:
     bool Set(const CKeyID &id);
     bool Set(const CScriptID &id);
     bool Set(const CTxDestination &dest);
     bool IsValid() const;
 
-    CEndoxCoinAddress() {}
-    CEndoxCoinAddress(const CTxDestination &dest) { Set(dest); }
-    CEndoxCoinAddress(const std::string& strAddress) { SetString(strAddress); }
-    CEndoxCoinAddress(const char* pszAddress) { SetString(pszAddress); }
+    CKatzCoinAddress() {}
+    CKatzCoinAddress(const CTxDestination &dest) { Set(dest); }
+    CKatzCoinAddress(const std::string& strAddress) { SetString(strAddress); }
+    CKatzCoinAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
@@ -118,7 +118,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CEndoxCoinSecret : public CBase58Data
+class CKatzCoinSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -127,11 +127,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CEndoxCoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CEndoxCoinSecret() {}
+    CKatzCoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CKatzCoinSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CEndoxCoinExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CKatzCoinExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -146,14 +146,14 @@ public:
         return ret;
     }
 
-    CEndoxCoinExtKeyBase(const K &key) {
+    CKatzCoinExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CEndoxCoinExtKeyBase() {}
+    CKatzCoinExtKeyBase() {}
 };
 
-typedef CEndoxCoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CEndoxCoinExtKey;
-typedef CEndoxCoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CEndoxCoinExtPubKey;
+typedef CKatzCoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CKatzCoinExtKey;
+typedef CKatzCoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CKatzCoinExtPubKey;
 
 #endif // BITCOIN_BASE58_H

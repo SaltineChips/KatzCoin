@@ -13,12 +13,12 @@
   - '0' and 'O' to 'o'
 */
 
-EndoxCoinAddressValidator::EndoxCoinAddressValidator(QObject *parent) :
+KatzCoinAddressValidator::KatzCoinAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State EndoxCoinAddressValidator::validate(QString &input, int &pos) const
+QValidator::State KatzCoinAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)

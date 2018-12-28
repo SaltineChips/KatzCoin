@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Endox-Coin</source>
-        <translation>Om Endox-Coin</translation>
+        <source>About Katz-Coin</source>
+        <translation>Om Katz-Coin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Endox-Coin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Endox-Coin&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;Katz-Coin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Katz-Coin&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Endox-Coin developers</source>
+Copyright © 2014 The Katz-Coin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Endox-Coin developers</translation>
+Copyright © 2014 The Katz-Coin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Endox-Coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dette er dine Endox-Coin adresser til at modtage betalinger. Du ønsker måske at give en anden en til af hver afsender, så du kan holde styr på hvem der betaler dig.</translation>
+        <source>These are your Katz-Coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dette er dine Katz-Coin adresser til at modtage betalinger. Du ønsker måske at give en anden en til af hver afsender, så du kan holde styr på hvem der betaler dig.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Endox-Coin address</source>
-        <translation>Signerer en meddelelse for at bevise du ejer en Endox-Coin adresse</translation>
+        <source>Sign a message to prove you own a Katz-Coin address</source>
+        <translation>Signerer en meddelelse for at bevise du ejer en Katz-Coin adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Endox-Coin address</source>
-        <translation>Bekræft en meddelelse for at sikre, den blev underskrevet med en specificeret Endox-Coin adresse</translation>
+        <source>Verify a message to ensure it was signed with a specified Katz-Coin address</source>
+        <translation>Bekræft en meddelelse for at sikre, den blev underskrevet med en specificeret Katz-Coin adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Endox-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Endox-Coin lukker nu for at afslutte krypteringen. Husk at en krypteret  tegnebog ikke fuldt ud beskytter dine mønter mod at blive stjålet af malware som har inficeret din computer.</translation>
+        <source>Katz-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Katz-Coin lukker nu for at afslutte krypteringen. Husk at en krypteret  tegnebog ikke fuldt ud beskytter dine mønter mod at blive stjålet af malware som har inficeret din computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -304,7 +304,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>EndoxCoinGUI</name>
+    <name>KatzCoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Endox-Coin</source>
-        <translation>Vis oplysninger om Endox-Coin</translation>
+        <source>Show information about Katz-Coin</source>
+        <translation>Vis oplysninger om Katz-Coin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Endox-Coin address</source>
-        <translation>Send mønter til en Endox-Coin adresse</translation>
+        <source>Send coins to a Katz-Coin address</source>
+        <translation>Send mønter til en Katz-Coin adresse</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Endox-Coin</source>
-        <translation>Ændre indstillingsmuligheder for Endox-Coin</translation>
+        <source>Modify configuration options for Katz-Coin</source>
+        <translation>Ændre indstillingsmuligheder for Katz-Coin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Endox-Coin</source>
-        <translation>Endox-Coin</translation>
+        <source>Katz-Coin</source>
+        <translation>Katz-Coin</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Endox-Coin</source>
-        <translation>&amp;Om Endox-Coin</translation>
+        <source>&amp;About Katz-Coin</source>
+        <translation>&amp;Om Katz-Coin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Endox-Coin client</source>
-        <translation>Endox-Coin klient</translation>
+        <source>Katz-Coin client</source>
+        <translation>Katz-Coin klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Endox-Coin network</source>
-        <translation><numerusform>%n aktiv forbindelse til Endox-Coin netværk</numerusform><numerusform>%n aktive forbindelser til Endox-Coin netværk</numerusform></translation>
+        <source>%n active connection(s) to Katz-Coin network</source>
+        <translation><numerusform>%n aktiv forbindelse til Katz-Coin netværk</numerusform><numerusform>%n aktive forbindelser til Katz-Coin netværk</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -600,8 +600,8 @@ Adresse: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Endox-Coin address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Endox-Coin adresse eller misdannede URI parametre.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Katz-Coin address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Katz-Coin adresse eller misdannede URI parametre.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,7 +723,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Endox-Coin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Katz-Coin can no longer continue safely and will quit.</source>
         <translation>Der opstod en fejl under forsøg på at gemme dataene i tegnebogen til den nye placering.</translation>
     </message>
 </context>
@@ -1057,8 +1057,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Endox-Coin address.</source>
-        <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig Endox-Coin adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Katz-Coin address.</source>
+        <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig Katz-Coin adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1076,8 +1076,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Endox-Coin-Qt</source>
-        <translation>Endox-Coin-Qt</translation>
+        <source>Katz-Coin-Qt</source>
+        <translation>Katz-Coin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1149,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Endox-Coin after logging in to the system.</source>
-        <translation>Automatisk start Endox-Coin efter at have logget ind på systemet.</translation>
+        <source>Automatically start Katz-Coin after logging in to the system.</source>
+        <translation>Automatisk start Katz-Coin efter at have logget ind på systemet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Endox-Coin on system login</source>
-        <translation>&amp;Start Endox-Coin ved systems login</translation>
+        <source>&amp;Start Katz-Coin on system login</source>
+        <translation>&amp;Start Katz-Coin ved systems login</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1164,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Endox-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisk åbne Endox-Coin klient-port på routeren. Dette virker kun, når din router understøtter UPnP og er det er aktiveret.</translation>
+        <source>Automatically open the Katz-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisk åbne Katz-Coin klient-port på routeren. Dette virker kun, når din router understøtter UPnP og er det er aktiveret.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1174,8 +1174,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Endox-Coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Opret forbindelse til Endox-Coin netværk via en SOCKS proxy (fx ved tilslutning gennem Tor).</translation>
+        <source>Connect to the Katz-Coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Opret forbindelse til Katz-Coin netværk via en SOCKS proxy (fx ved tilslutning gennem Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,8 +1249,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Endox-Coin.</source>
-        <translation>Sproget i brugergrænsefladen kan indstilles her. Denne indstilling vil træde i kraft efter genstart af Endox-Coin tegnebog.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Katz-Coin.</source>
+        <translation>Sproget i brugergrænsefladen kan indstilles her. Denne indstilling vil træde i kraft efter genstart af Katz-Coin tegnebog.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1316,8 +1316,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Endox-Coin.</source>
-        <translation>Denne indstilling vil træde i kraft efter genstart af Endox-Coin.</translation>
+        <source>This setting will take effect after restarting Katz-Coin.</source>
+        <translation>Denne indstilling vil træde i kraft efter genstart af Katz-Coin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Endox-Coin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Endox-Coin netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Katz-Coin network after a connection is established, but this process has not completed yet.</source>
+        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Katz-Coin netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1409,7 +1409,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Endox-Coin: click-to-pay handler</source>
+        <source>Cannot start Katz-Coin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1577,8 +1577,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Endox-Coin-Qt help message to get a list with possible Endox-Coin command-line options.</source>
-        <translation>Vis Endox-Coin-Qt hjælpe besked for at få en liste med mulige Endox-Coin kommandolinjeparametre.</translation>
+        <source>Show the Katz-Coin-Qt help message to get a list with possible Katz-Coin command-line options.</source>
+        <translation>Vis Katz-Coin-Qt hjælpe besked for at få en liste med mulige Katz-Coin kommandolinjeparametre.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1597,13 +1597,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Endox-Coin - Debug window</source>
-        <translation>Endox-Coin - Debug vindue</translation>
+        <source>Katz-Coin - Debug window</source>
+        <translation>Katz-Coin - Debug vindue</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Endox-Coin Core</source>
-        <translation>Endox-Coin Kerne</translation>
+        <source>Katz-Coin Core</source>
+        <translation>Katz-Coin Kerne</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1612,8 +1612,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Endox-Coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Åbn Endox-Coin debug logfilen fra den nuværende data mappe. Dette kan tage et par sekunder for store logfiler.</translation>
+        <source>Open the Katz-Coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Åbn Katz-Coin debug logfilen fra den nuværende data mappe. Dette kan tage et par sekunder for store logfiler.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1622,8 +1622,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Endox-Coin RPC console.</source>
-        <translation>Velkommen til Endox-Coin RPC-konsol.</translation>
+        <source>Welcome to the Katz-Coin RPC console.</source>
+        <translation>Velkommen til Katz-Coin RPC-konsol.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1816,8 +1816,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Indtast en Endox-Coin-adresse (f.eks ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Indtast en Katz-Coin-adresse (f.eks ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1916,8 +1916,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Endox-Coin address</source>
-        <translation>ADVARSEL: Ugyldig Endox-Coin adresse</translation>
+        <source>WARNING: Invalid Katz-Coin address</source>
+        <translation>ADVARSEL: Ugyldig Katz-Coin adresse</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1990,8 +1990,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Indtast en Endox-Coin-adresse (f.eks ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Indtast en Katz-Coin-adresse (f.eks ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
 </context>
 <context>
@@ -2010,7 +2010,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan underskrive beskeder med dine EndoxCoin-adresser for at bevise, at de tilhører dig. Pas på ikke at underskrive noget vagt, da phisingangreb kan narre dig til at overdrage din identitet. Underskriv kun fuldt detaljerede udsagn, du er enig i.</translation>
+        <translation>Du kan underskrive beskeder med dine KatzCoin-adresser for at bevise, at de tilhører dig. Pas på ikke at underskrive noget vagt, da phisingangreb kan narre dig til at overdrage din identitet. Underskriv kun fuldt detaljerede udsagn, du er enig i.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -2051,8 +2051,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Endox-Coin address</source>
-        <translation>Underskriv brevet for at bevise du ejer denne Endox-Coin adresse</translation>
+        <source>Sign the message to prove you own this Katz-Coin address</source>
+        <translation>Underskriv brevet for at bevise du ejer denne Katz-Coin adresse</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2083,8 +2083,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Endox-Coin address</source>
-        <translation>Kontroller meddelelsen for at sikre, at den blev indgået med den angivne Endox-Coin adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Katz-Coin address</source>
+        <translation>Kontroller meddelelsen for at sikre, at den blev indgået med den angivne Katz-Coin adresse</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2094,8 +2094,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Indtast en Endox-Coin-adresse (f.eks ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Indtast en Katz-Coin-adresse (f.eks ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2104,8 +2104,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Endox-Coin signature</source>
-        <translation>Indtast Endox-Coin underskrift</translation>
+        <source>Enter Katz-Coin signature</source>
+        <translation>Indtast Katz-Coin underskrift</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2683,8 +2683,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Endox-Coin version</source>
-        <translation>Endox-Coin version</translation>
+        <source>Katz-Coin version</source>
+        <translation>Katz-Coin version</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2693,8 +2693,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Endox-Coind</source>
-        <translation>Send kommando til-server eller Endox-Coind</translation>
+        <source>Send command to -server or Katz-Coind</source>
+        <translation>Send kommando til-server eller Katz-Coind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2713,13 +2713,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Endox-Coin.conf)</source>
-        <translation>Angiv konfigurationsfil (default: Endox-Coin.conf)</translation>
+        <source>Specify configuration file (default: Katz-Coin.conf)</source>
+        <translation>Angiv konfigurationsfil (default: Katz-Coin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Endox-Coind.pid)</source>
-        <translation>Angiv pid fil (standard: Endox-Coind.pid)</translation>
+        <source>Specify pid file (default: Katz-Coind.pid)</source>
+        <translation>Angiv pid fil (standard: Katz-Coind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2736,13 +2736,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Endox-Coinrpc
+rpcuser=Katz-Coinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Katz-Coin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2848,8 +2848,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Endox-Coin will not work properly.</source>
-        <translation>Advarsel: Kontroller venligst, at computerens dato og klokkeslæt er korrekt! Hvis dit ur er forkert vil Endox-Coin ikke fungere korrekt.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Katz-Coin will not work properly.</source>
+        <translation>Advarsel: Kontroller venligst, at computerens dato og klokkeslæt er korrekt! Hvis dit ur er forkert vil Katz-Coin ikke fungere korrekt.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -2923,8 +2923,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the EndoxCoin Wiki for SSL setup instructions)</source>
-        <translation>SSL-indstillinger: (se EndoxCoin Wiki for SSL-opsætningsinstruktioner)</translation>
+        <source>SSL options: (see the KatzCoin Wiki for SSL setup instructions)</source>
+        <translation>SSL-indstillinger: (se KatzCoin Wiki for SSL-opsætningsinstruktioner)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3155,7 +3155,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Endox-Coin is shutting down.</source>
+        <source>Initialization sanity check failed. Katz-Coin is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3220,13 +3220,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Endox-Coin</source>
-        <translation>Fejl ved indlæsning af wallet.dat: Wallet kræver en nyere version af Endox-Coin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Katz-Coin</source>
+        <translation>Fejl ved indlæsning af wallet.dat: Wallet kræver en nyere version af Katz-Coin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Endox-Coin to complete</source>
-        <translation>Det er nødvendig for wallet at blive omskrevet: Genstart Endox-Coin for fuldføre</translation>
+        <source>Wallet needed to be rewritten: restart Katz-Coin to complete</source>
+        <translation>Det er nødvendig for wallet at blive omskrevet: Genstart Katz-Coin for fuldføre</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3290,8 +3290,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Endox-Coin is probably already running.</source>
-        <translation>Kunne ikke binde sig til% s på denne computer. Endox-Coin kører sikkert allerede.</translation>
+        <source>Unable to bind to %s on this computer. Katz-Coin is probably already running.</source>
+        <translation>Kunne ikke binde sig til% s på denne computer. Katz-Coin kører sikkert allerede.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3330,7 +3330,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Endox-Coin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Katz-Coin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

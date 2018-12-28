@@ -17,7 +17,7 @@
 #include <list>
 
 #define START_MASTERNODE_PAYMENTS_TESTNET      9993058800  // OFF (NOT TOGGLED)
-#define START_MASTERNODE_PAYMENTS              1548205860  // ON (TOGGLED)
+#define START_MASTERNODE_PAYMENTS              9993058800  // OFF (NOT TOGGLED)
 
 #define INSTANTX_SIGNATURES_REQUIRED           2
 #define INSTANTX_SIGNATURES_TOTAL              4
@@ -70,7 +70,7 @@ static const int64_t MIN_TX_COUNT = 0;
 /** Minimum TX value (for relaying) */
 static const int64_t MIN_TX_VALUE = 0.01 * COIN;
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_SINGLE_TX = 8850000000 * COIN; // 8.85 Billion Endox-Coin coins
+static const int64_t MAX_SINGLE_TX = 88500000000 * COIN; // 88.5 Billion Katz-Coin
 /** Moneyrange params */
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_SINGLE_TX); }
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
@@ -98,7 +98,7 @@ static const int64_t GetTargetSpacing = BLOCK_SPACING;
 /** "reject" message codes **/
 static const unsigned char REJECT_INVALID = 0x10;
 /** MasterNode required collateral */
-inline int64_t MasternodeCollateral(int nHeight) { return 10000; } // 10K ENDOX required as collateral
+inline int64_t MasternodeCollateral(int nHeight) { return 10000; } // 10K KATZ required as collateral
 /** Coinbase transaction outputs can only be staked after this number of new blocks (network rule) */
 static const int nStakeMinConfirmations = 25;
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */

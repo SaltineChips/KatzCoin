@@ -91,8 +91,8 @@ QFont bitcoinAddressFont()
 
 void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
-    widget->setMaxLength(EndoxCoinAddressValidator::MaxAddressLength);
-    widget->setValidator(new EndoxCoinAddressValidator(parent));
+    widget->setMaxLength(KatzCoinAddressValidator::MaxAddressLength);
+    widget->setValidator(new KatzCoinAddressValidator(parent));
     widget->setFont(bitcoinAddressFont());
 }
 
@@ -105,10 +105,10 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseEndoxCoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseKatzCoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("Endox-Coin"))
+    if(uri.scheme() != QString("Katz-Coin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -138,7 +138,7 @@ bool parseEndoxCoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!EndoxCoinUnits::parse(EndoxCoinUnits::ENDOX, i->second, &rv.amount))
+                if(!KatzCoinUnits::parse(KatzCoinUnits::KATZ, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -156,18 +156,18 @@ bool parseEndoxCoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseEndoxCoinURI(QString uri, SendCoinsRecipient *out)
+bool parseKatzCoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert endoxcoin:// to EndoxCoin:
+    // Convert katzcoin:// to KatzCoin:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("endoxcoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("katzcoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "EndoxCoin:");
+        uri.replace(0, 11, "KatzCoin:");
     }
     QUrl uriInstance(uri);
-    return parseEndoxCoinURI(uriInstance, out);
+    return parseKatzCoinURI(uriInstance, out);
 }
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
@@ -492,12 +492,12 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Endox-Coin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Katz-Coin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Endox-Coin.lnk
+    // check for Katz-Coin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -574,7 +574,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "Endox-Coin.desktop";
+    return GetAutostartDir() / "Katz-Coin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -612,10 +612,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a Endox-Coin.desktop file to the autostart directory:
+        // Write a Katz-Coin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Endox-Coin\n";
+        optionFile << "Name=Katz-Coin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -634,7 +634,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the Endox-Coin app
+    // loop through the list of startup items and try to find the Katz-Coin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -668,7 +668,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add Endox-Coin app to startup item list
+        // add Katz-Coin app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
@@ -687,10 +687,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Endox-Coin-Qt") + " " + tr("version") + " " +
+    header = tr("Katz-Coin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  Endox-Coin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  Katz-Coin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -699,7 +699,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Endox-Coin-Qt"));
+    setWindowTitle(tr("Katz-Coin-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

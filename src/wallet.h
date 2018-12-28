@@ -259,7 +259,7 @@ public:
     int ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate = false);
     void ReacceptWalletTransactions();
     void ResendWalletTransactions(bool fForce = false);
-    bool ImportPrivateKey(CEndoxCoinSecret vchSecret, string strLabel = "", bool fRescan = true);
+    bool ImportPrivateKey(CKatzCoinSecret vchSecret, string strLabel = "", bool fRescan = true);
 
     CAmount GetBalance() const;
     CAmount GetStake() const;

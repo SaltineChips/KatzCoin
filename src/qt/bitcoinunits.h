@@ -37,22 +37,22 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** EndoxCoin unit definitions. Encapsulates parsing and formatting
+/** KatzCoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class EndoxCoinUnits: public QAbstractListModel
+class KatzCoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit EndoxCoinUnits(QObject *parent);
+    explicit KatzCoinUnits(QObject *parent);
 
-    /** EndoxCoin units.
+    /** KatzCoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        ENDOX,
+        KATZ,
         mIVC,
         uIVC
     };
@@ -121,8 +121,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<EndoxCoinUnits::Unit> unitlist;
+    QList<KatzCoinUnits::Unit> unitlist;
 };
-typedef EndoxCoinUnits::Unit EndoxCoinUnit;
+typedef KatzCoinUnits::Unit KatzCoinUnit;
 
 #endif // BITCOINUNITS_H

@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Endox-Coin</source>
-        <translation>Despre Endox-Coin</translation>
+        <source>About Katz-Coin</source>
+        <translation>Despre Katz-Coin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Endox-Coin&lt;/b&gt; version</source>
-        <translation>Versiune &lt;b&gt;Endox-Coin&lt;/b&gt;</translation>
+        <source>&lt;b&gt;Katz-Coin&lt;/b&gt; version</source>
+        <translation>Versiune &lt;b&gt;Katz-Coin&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Endox-Coin developers</source>
+Copyright © 2014 The Katz-Coin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Endox-Coin developers</translation>
+Copyright © 2014 The Katz-Coin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Endox-Coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Acestea sunt adresele Endox-Coin pentru a primi plăți. Poate doriți sa dați o adresa noua fiecarui expeditor pentru a putea ține evidența la cine efectuează plăti.</translation>
+        <source>These are your Katz-Coin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Acestea sunt adresele Katz-Coin pentru a primi plăți. Poate doriți sa dați o adresa noua fiecarui expeditor pentru a putea ține evidența la cine efectuează plăti.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Endox-Coin address</source>
-        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Endox-Coin</translation>
+        <source>Sign a message to prove you own a Katz-Coin address</source>
+        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Katz-Coin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Endox-Coin address</source>
-        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Endox-Coin</translation>
+        <source>Verify a message to ensure it was signed with a specified Katz-Coin address</source>
+        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Katz-Coin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Endox-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Endox-Coin se va inchide pentru a termina procesul de encriptie. Amintiți-vă, criptarea portofelul dumneavoastră nu poate proteja pe deplin monedele dvs. de a fi furate de  infectarea cu malware a computerului.</translation>
+        <source>Katz-Coin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Katz-Coin se va inchide pentru a termina procesul de encriptie. Amintiți-vă, criptarea portofelul dumneavoastră nu poate proteja pe deplin monedele dvs. de a fi furate de  infectarea cu malware a computerului.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -304,7 +304,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>EndoxCoinGUI</name>
+    <name>KatzCoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Endox-Coin</source>
-        <translation>Arată informații despre Endox-Coin</translation>
+        <source>Show information about Katz-Coin</source>
+        <translation>Arată informații despre Katz-Coin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Endox-Coin address</source>
-        <translation>Trimite monede către o adresă Endox-Coin</translation>
+        <source>Send coins to a Katz-Coin address</source>
+        <translation>Trimite monede către o adresă Katz-Coin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Endox-Coin</source>
-        <translation>Modifică opțiuni de configurare pentru Endox-Coin</translation>
+        <source>Modify configuration options for Katz-Coin</source>
+        <translation>Modifică opțiuni de configurare pentru Katz-Coin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Endox-Coin</source>
-        <translation>Endox-Coin</translation>
+        <source>Katz-Coin</source>
+        <translation>Katz-Coin</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Endox-Coin</source>
-        <translation>Despre Endox-Coin</translation>
+        <source>&amp;About Katz-Coin</source>
+        <translation>Despre Katz-Coin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Endox-Coin client</source>
-        <translation>Clientul Endox-Coin</translation>
+        <source>Katz-Coin client</source>
+        <translation>Clientul Katz-Coin</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Endox-Coin network</source>
-        <translation><numerusform>%n conexiune activă la reteaua Endox-Coin</numerusform><numerusform>%n conexiuni active la reteaua Endox-Coin</numerusform><numerusform>%n conexiuni active la reteaua Endox-Coin</numerusform></translation>
+        <source>%n active connection(s) to Katz-Coin network</source>
+        <translation><numerusform>%n conexiune activă la reteaua Katz-Coin</numerusform><numerusform>%n conexiuni active la reteaua Katz-Coin</numerusform><numerusform>%n conexiuni active la reteaua Katz-Coin</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -600,8 +600,8 @@ Adresa: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Endox-Coin address or malformed URI parameters.</source>
-        <translation>URI nu poate fi parsatt! Cauza poate fi o adresa Endox-Coin invalidă sau parametrii URI malformați.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Katz-Coin address or malformed URI parameters.</source>
+        <translation>URI nu poate fi parsatt! Cauza poate fi o adresa Katz-Coin invalidă sau parametrii URI malformați.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,8 +723,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Endox-Coin can no longer continue safely and will quit.</source>
-        <translation>A apărut o eroare fatală. Endox-Coin nu mai poate continua în condiții de siguranță și va iesi.</translation>
+        <source>A fatal error occurred. Katz-Coin can no longer continue safely and will quit.</source>
+        <translation>A apărut o eroare fatală. Katz-Coin nu mai poate continua în condiții de siguranță și va iesi.</translation>
     </message>
 </context>
 <context>
@@ -1057,8 +1057,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Endox-Coin address.</source>
-        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă Endox-Coin validă</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Katz-Coin address.</source>
+        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă Katz-Coin validă</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1076,8 +1076,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Endox-Coin-Qt</source>
-        <translation>Endox-Coin-Qt</translation>
+        <source>Katz-Coin-Qt</source>
+        <translation>Katz-Coin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1149,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Endox-Coin after logging in to the system.</source>
-        <translation>Pornește Endox-Coin imdiat după logarea în sistem</translation>
+        <source>Automatically start Katz-Coin after logging in to the system.</source>
+        <translation>Pornește Katz-Coin imdiat după logarea în sistem</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Endox-Coin on system login</source>
-        <translation>$Pornește Endox-Coin la logarea în sistem</translation>
+        <source>&amp;Start Katz-Coin on system login</source>
+        <translation>$Pornește Katz-Coin la logarea în sistem</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1164,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Endox-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Deschide automat portul pentru cientul Endox-Coin pe router. Aces lucru este posibil doara daca routerul suporta UPnP si este activat</translation>
+        <source>Automatically open the Katz-Coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Deschide automat portul pentru cientul Katz-Coin pe router. Aces lucru este posibil doara daca routerul suporta UPnP si este activat</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1174,8 +1174,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Endox-Coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Conecteaza la reteaua Endox-Coin prinr-un proxy SOCKS(ex. cand te conectezi prin Tor)</translation>
+        <source>Connect to the Katz-Coin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Conecteaza la reteaua Katz-Coin prinr-un proxy SOCKS(ex. cand te conectezi prin Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,8 +1249,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Endox-Coin.</source>
-        <translation>Limba interfeței utilizator poate fi setat aici. Această setare va avea efect după repornirea Endox-Coin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Katz-Coin.</source>
+        <translation>Limba interfeței utilizator poate fi setat aici. Această setare va avea efect după repornirea Katz-Coin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1316,8 +1316,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Endox-Coin.</source>
-        <translation>Aceasta setare va avea efect dupa repornirea Endox-Coin.</translation>
+        <source>This setting will take effect after restarting Katz-Coin.</source>
+        <translation>Aceasta setare va avea efect dupa repornirea Katz-Coin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Endox-Coin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informatia afisata poate fi depasita.  Portofel se sincronizează automat cu rețeaua Endox-Coin după ce se stabilește o conexiune, dar acest proces nu s-a finalizat încă.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Katz-Coin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informatia afisata poate fi depasita.  Portofel se sincronizează automat cu rețeaua Katz-Coin după ce se stabilește o conexiune, dar acest proces nu s-a finalizat încă.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1409,7 +1409,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Endox-Coin: click-to-pay handler</source>
+        <source>Cannot start Katz-Coin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1577,8 +1577,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Endox-Coin-Qt help message to get a list with possible Endox-Coin command-line options.</source>
-        <translation>Afișa mesajul de ajutor Endox-Coin-Qt pentru a obține o listă cu posibile opțiuni de linie de comandă Endox-Coin.</translation>
+        <source>Show the Katz-Coin-Qt help message to get a list with possible Katz-Coin command-line options.</source>
+        <translation>Afișa mesajul de ajutor Katz-Coin-Qt pentru a obține o listă cu posibile opțiuni de linie de comandă Katz-Coin.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1597,13 +1597,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Endox-Coin - Debug window</source>
-        <translation>Endox-Coin - fereastră depanare</translation>
+        <source>Katz-Coin - Debug window</source>
+        <translation>Katz-Coin - fereastră depanare</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Endox-Coin Core</source>
-        <translation>Endox-Coin Core</translation>
+        <source>Katz-Coin Core</source>
+        <translation>Katz-Coin Core</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1612,8 +1612,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Endox-Coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Deschideti fisierul de depanare Endox-Coin din folderul curent. Acest lucru poate dura cateva secunde pentru fisiere de log mari.</translation>
+        <source>Open the Katz-Coin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Deschideti fisierul de depanare Katz-Coin din folderul curent. Acest lucru poate dura cateva secunde pentru fisiere de log mari.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1622,8 +1622,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Endox-Coin RPC console.</source>
-        <translation>Bine ati venit la consola Endox-Coin RPC.</translation>
+        <source>Welcome to the Katz-Coin RPC console.</source>
+        <translation>Bine ati venit la consola Katz-Coin RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1816,8 +1816,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Introduceți o adresă Endox-Coin(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Introduceți o adresă Katz-Coin(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1916,8 +1916,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Endox-Coin address</source>
-        <translation>Atenție: Adresă Endox-Coin invalidă</translation>
+        <source>WARNING: Invalid Katz-Coin address</source>
+        <translation>Atenție: Adresă Katz-Coin invalidă</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1990,8 +1990,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Introduceți o adresă Endox-Coin(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Introduceți o adresă Katz-Coin(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
 </context>
 <context>
@@ -2010,7 +2010,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le Endox-Coinati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
+        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le Katz-Coinati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -2051,8 +2051,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Endox-Coin address</source>
-        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Endox-Coin</translation>
+        <source>Sign the message to prove you own this Katz-Coin address</source>
+        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Katz-Coin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2083,8 +2083,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Endox-Coin address</source>
-        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Endox-Coin</translation>
+        <source>Verify the message to ensure it was signed with the specified Katz-Coin address</source>
+        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Katz-Coin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2094,8 +2094,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Endox-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Introduceți o adresă Endox-Coin(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Katz-Coin address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Introduceți o adresă Katz-Coin(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2104,8 +2104,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Endox-Coin signature</source>
-        <translation>Introduceti semnatura Endox-Coin</translation>
+        <source>Enter Katz-Coin signature</source>
+        <translation>Introduceti semnatura Katz-Coin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2683,8 +2683,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Endox-Coin version</source>
-        <translation>Versiune Endox-Coin</translation>
+        <source>Katz-Coin version</source>
+        <translation>Versiune Katz-Coin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2693,8 +2693,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Endox-Coind</source>
-        <translation>Trimite comanda catre server sau Endox-Coind</translation>
+        <source>Send command to -server or Katz-Coind</source>
+        <translation>Trimite comanda catre server sau Katz-Coind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2713,13 +2713,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Endox-Coin.conf)</source>
-        <translation>Specifica fisier de configurare(implicit: Endox-Coin.conf)</translation>
+        <source>Specify configuration file (default: Katz-Coin.conf)</source>
+        <translation>Specifica fisier de configurare(implicit: Katz-Coin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Endox-Coind.pid)</source>
-        <translation>Speficica fisier pid(implicit: Endox-Coin.pid)</translation>
+        <source>Specify pid file (default: Katz-Coind.pid)</source>
+        <translation>Speficica fisier pid(implicit: Katz-Coin.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2736,13 +2736,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Endox-Coinrpc
+rpcuser=Katz-Coinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Katz-Coin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2848,8 +2848,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Endox-Coin will not work properly.</source>
-        <translation>Atentie: Va rugam verificati ca timpul si data calculatorului sunt corete. Daca timpul este gresit Endox-Coin nu va functiona corect.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Katz-Coin will not work properly.</source>
+        <translation>Atentie: Va rugam verificati ca timpul si data calculatorului sunt corete. Daca timpul este gresit Katz-Coin nu va functiona corect.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -2923,8 +2923,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the EndoxCoin Wiki for SSL setup instructions)</source>
-        <translation>Optiuni SSl (vezi EndoxCoin wiki pentru intructiunile de instalare)</translation>
+        <source>SSL options: (see the KatzCoin Wiki for SSL setup instructions)</source>
+        <translation>Optiuni SSl (vezi KatzCoin wiki pentru intructiunile de instalare)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3155,7 +3155,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Endox-Coin is shutting down.</source>
+        <source>Initialization sanity check failed. Katz-Coin is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3220,13 +3220,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Endox-Coin</source>
-        <translation>Eroare la încărcarea wallet.dat: Portofelul necesita o versiune mai noua de Endox-Coin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Katz-Coin</source>
+        <translation>Eroare la încărcarea wallet.dat: Portofelul necesita o versiune mai noua de Katz-Coin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Endox-Coin to complete</source>
-        <translation>A fost nevoie de rescrierea portofelului: restartați Endox-Coin pentru a finaliza</translation>
+        <source>Wallet needed to be rewritten: restart Katz-Coin to complete</source>
+        <translation>A fost nevoie de rescrierea portofelului: restartați Katz-Coin pentru a finaliza</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3290,8 +3290,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Endox-Coin is probably already running.</source>
-        <translation>Imposibil de conectat %s pe acest computer. Cel mai probabil Endox-Coin ruleaza</translation>
+        <source>Unable to bind to %s on this computer. Katz-Coin is probably already running.</source>
+        <translation>Imposibil de conectat %s pe acest computer. Cel mai probabil Katz-Coin ruleaza</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3330,7 +3330,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Endox-Coin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Endox-Coin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Katz-Coin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

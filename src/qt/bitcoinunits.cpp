@@ -9,26 +9,26 @@
 #include <QSettings>
 #include <QStringList>
 
-EndoxCoinUnits::EndoxCoinUnits(QObject *parent):
+KatzCoinUnits::KatzCoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<EndoxCoinUnits::Unit> EndoxCoinUnits::availableUnits()
+QList<KatzCoinUnits::Unit> KatzCoinUnits::availableUnits()
 {
-    QList<EndoxCoinUnits::Unit> unitlist;
-    unitlist.append(ENDOX);
+    QList<KatzCoinUnits::Unit> unitlist;
+    unitlist.append(KATZ);
     unitlist.append(mIVC);
     unitlist.append(uIVC);
     return unitlist;
 }
 
-bool EndoxCoinUnits::valid(int unit)
+bool KatzCoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case ENDOX:
+    case KATZ:
     case mIVC:
     case uIVC:
         return true;
@@ -37,62 +37,62 @@ bool EndoxCoinUnits::valid(int unit)
     }
 }
 
-QString EndoxCoinUnits::name(int unit)
+QString KatzCoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case ENDOX: return QString("ENDOX");
+    case KATZ: return QString("KATZ");
     case mIVC: return QString("mIVC");
     case uIVC: return QString::fromUtf8("μIVC");
     default: return QString("???");
     }
 }
 
-QString EndoxCoinUnits::description(int unit)
+QString KatzCoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case ENDOX: return QString("Endox-Coins");
-    case mIVC: return QString("Milli-Endox-Coins (1 / 1,000)");
-    case uIVC: return QString("Micro-Endox-Coins (1 / 1,000,000)");
+    case KATZ: return QString("Katz-Coins");
+    case mIVC: return QString("Milli-Katz-Coins (1 / 1,000)");
+    case uIVC: return QString("Micro-Katz-Coins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
 
-qint64 EndoxCoinUnits::factor(int unit)
+qint64 KatzCoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case ENDOX:  return 100000000;
+    case KATZ:  return 100000000;
     case mIVC: return 100000;
     case uIVC: return 100;
     default:   return 100000000;
     }
 }
 
-int EndoxCoinUnits::amountDigits(int unit)
+int KatzCoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case ENDOX: return 8; // 21,000,000 (# digits, without commas)
+    case KATZ: return 8; // 21,000,000 (# digits, without commas)
     case mIVC: return 11; // 21,000,000,000
     case uIVC: return 14; // 21,000,000,000,000
     default: return 0;
     }
 }
 
-int EndoxCoinUnits::decimals(int unit)
+int KatzCoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case ENDOX: return 8;
+    case KATZ: return 8;
     case mIVC: return 5;
     case uIVC: return 2;
     default: return 0;
     }
 }
 
-QString EndoxCoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
+QString KatzCoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -120,7 +120,7 @@ QString EndoxCoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separat
     return quotient_str + QString(".") + remainder_str;
 }
 
-// TODO: Review all remaining calls to EndoxCoinUnits::formatWithUnit to
+// TODO: Review all remaining calls to KatzCoinUnits::formatWithUnit to
 // TODO: determine whether the output is used in a plain text context
 // TODO: or an HTML context (and replace with
 // TODO: BtcoinUnits::formatHtmlWithUnit in the latter case). Hopefully
@@ -135,19 +135,19 @@ QString EndoxCoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separat
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString EndoxCoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KatzCoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + name(unit);
 }
 
-QString EndoxCoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KatzCoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-QString EndoxCoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KatzCoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QSettings settings;
     int digits = settings.value("digits").toInt();
@@ -158,14 +158,14 @@ QString EndoxCoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plus
     return result + QString(" ") + name(unit);
 }
 
-QString EndoxCoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KatzCoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(floorWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-bool EndoxCoinUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool KatzCoinUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -204,23 +204,23 @@ bool EndoxCoinUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-QString EndoxCoinUnits::getAmountColumnTitle(int unit)
+QString KatzCoinUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (EndoxCoinUnits::valid(unit))
+    if (KatzCoinUnits::valid(unit))
     {
-        amountTitle += " ("+EndoxCoinUnits::name(unit) + ")";
+        amountTitle += " ("+KatzCoinUnits::name(unit) + ")";
     }
     return amountTitle;
 }
 
-int EndoxCoinUnits::rowCount(const QModelIndex &parent) const
+int KatzCoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant EndoxCoinUnits::data(const QModelIndex &index, int role) const
+QVariant KatzCoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -240,7 +240,7 @@ QVariant EndoxCoinUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount EndoxCoinUnits::maxMoney()
+CAmount KatzCoinUnits::maxMoney()
 {
     return MAX_SINGLE_TX;
 }

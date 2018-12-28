@@ -2,7 +2,7 @@
  * Qt5 bitcoin GUI.
  *
  * W.J. van der Laan 2011-2012
- * The EndoxCoin Developers 2018-2019
+ * The KatzCoin Developers 2018-2019
  */
 
 #include <QApplication>
@@ -76,7 +76,7 @@ extern CWallet* pwalletMain;
 extern int64_t nLastCoinStakeSearchInterval;
 double GetPoSKernelPS();
 
-EndoxCoinGUI::EndoxCoinGUI(QWidget *parent):
+KatzCoinGUI::KatzCoinGUI(QWidget *parent):
     QMainWindow(parent),
     clientModel(0),
     walletModel(0),
@@ -96,7 +96,7 @@ EndoxCoinGUI::EndoxCoinGUI(QWidget *parent):
     nWeight(0)
 {
     resize(900, 520);
-    setWindowTitle(tr("Endox-Coin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Katz-Coin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -104,8 +104,8 @@ EndoxCoinGUI::EndoxCoinGUI(QWidget *parent):
     //setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
-    setObjectName("Endox-Coin");
-    setStyleSheet("#Endox-Coin { background-color: #ffffff; color: #4c5259;}");
+    setObjectName("Katz-Coin");
+    setStyleSheet("#Katz-Coin { background-color: #ffffff; color: #4c5259;}");
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -229,7 +229,7 @@ EndoxCoinGUI::EndoxCoinGUI(QWidget *parent):
 
     if (!fUseBlackTheme)
     {
-        statusBar()->setStyleSheet("#statusBar { color: #ae1013; background-color: #c42125; }");
+        statusBar()->setStyleSheet("#statusBar { color: #651616; background-color: #651616; }");
     }
 
     syncIconMovie = new QMovie(fUseBlackTheme ? ":/movies/update_spinner_black" : ":/movies/update_spinner", "mng", this);
@@ -258,7 +258,7 @@ EndoxCoinGUI::EndoxCoinGUI(QWidget *parent):
     gotoOverviewPage();
 }
 
-EndoxCoinGUI::~EndoxCoinGUI()
+KatzCoinGUI::~KatzCoinGUI()
 {
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
@@ -269,7 +269,7 @@ EndoxCoinGUI::~EndoxCoinGUI()
     delete rpcConsole;
 }
 
-void EndoxCoinGUI::createActions()
+void KatzCoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -286,7 +286,7 @@ void EndoxCoinGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a Endox-Coin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a Katz-Coin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(sendCoinsAction);
@@ -335,14 +335,14 @@ void EndoxCoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":icons/endox-coin"), tr("&About Endox-Coin"), this);
-    aboutAction->setToolTip(tr("Show information about Endox-Coin"));
+    aboutAction = new QAction(QIcon(":icons/katz-coin"), tr("&About Katz-Coin"), this);
+    aboutAction->setToolTip(tr("Show information about Katz-Coin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/qt-project.org/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for Endox-Coin"));
+    optionsAction->setToolTip(tr("Modify configuration options for Katz-Coin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -365,12 +365,12 @@ void EndoxCoinGUI::createActions()
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));
 
-    editConfigAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Endox-Coin.conf"), this);
-    editConfigAction->setToolTip(tr("Edit the configuration file for Endox-Coin"));
-    editConfigExtAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Endox-Coin.conf (external)"), this);
-    editConfigExtAction->setToolTip(tr("Edit the configuration file for Endox-Coin (external editor)"));
+    editConfigAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Katz-Coin.conf"), this);
+    editConfigAction->setToolTip(tr("Edit the configuration file for Katz-Coin"));
+    editConfigExtAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Katz-Coin.conf (external)"), this);
+    editConfigExtAction->setToolTip(tr("Edit the configuration file for Katz-Coin (external editor)"));
     openDataDirAction = new QAction(QIcon(":/icons/folder"), tr("&Open data dir"), this);
-    openDataDirAction->setToolTip(tr("Open the directory where Endox-Coin data is stored"));
+    openDataDirAction->setToolTip(tr("Open the directory where Katz-Coin data is stored"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -390,7 +390,7 @@ void EndoxCoinGUI::createActions()
     connect(openDataDirAction, SIGNAL(triggered()), this, SLOT(openDataDir()));
 }
 
-void EndoxCoinGUI::createMenuBar()
+void KatzCoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     appMenuBar = new QMenuBar();
@@ -435,7 +435,7 @@ static QWidget* makeToolBarSpacer()
     return spacer;
 }
 
-void EndoxCoinGUI::createToolBars()
+void KatzCoinGUI::createToolBars()
 {
     fLiteMode = GetBoolArg("-litemode", false);
 
@@ -443,12 +443,12 @@ void EndoxCoinGUI::createToolBars()
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     toolbar->setObjectName("tabs");
-    toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold; } QToolButton:hover { background-color: #dd1419; } QToolButton:checked { background-color: #ae1013 } QToolButton:pressed { background-color: #c51216; } #tabs { color: #ffffff; background-color: #292c30; }");
+    toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold; } QToolButton:hover { background-color: #810604; } QToolButton:checked { background-color: #5b0403 } QToolButton:pressed { background-color: #6e0504; } #tabs { color: #ffffff; background-color: #292c30; }");
     toolbar->setIconSize(QSize(24,24));
 
     if(!fUseBlackTheme)
     {
-        toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold; } QToolButton:hover { background-color: #dd1419; } QToolButton:checked { background-color: #ae1013; } QToolButton:pressed { background-color: #c51216; } #tabs { color: #ffffff; background-color: #eb1f24; }");
+        toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold; } QToolButton:hover { background-color:#810604; } QToolButton:checked { background-color: #5b0403; } QToolButton:pressed { background-color: #6e0504; } #tabs { color: #ffffff; background-color: #ad0806; }");
     }
 
     QLabel* header = new QLabel();
@@ -482,7 +482,7 @@ void EndoxCoinGUI::createToolBars()
     }
 }
 
-void EndoxCoinGUI::setClientModel(ClientModel *clientModel)
+void KatzCoinGUI::setClientModel(ClientModel *clientModel)
 {
     if(!fOnlyTor)
     netLabel->setText("CLEARNET");
@@ -509,7 +509,7 @@ void EndoxCoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("Endox-Coin client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("Katz-Coin client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -536,7 +536,7 @@ void EndoxCoinGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-void EndoxCoinGUI::setWalletModel(WalletModel *walletModel)
+void KatzCoinGUI::setWalletModel(WalletModel *walletModel)
 {
     this->walletModel = walletModel;
     if(walletModel)
@@ -566,14 +566,14 @@ void EndoxCoinGUI::setWalletModel(WalletModel *walletModel)
     }
 }
 
-void EndoxCoinGUI::createTrayIcon()
+void KatzCoinGUI::createTrayIcon()
 {
     QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("Endox-Coin client"));
+    trayIcon->setToolTip(tr("Katz-Coin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -606,7 +606,7 @@ void EndoxCoinGUI::createTrayIcon()
 }
 
 #ifndef Q_OS_MAC
-void EndoxCoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void KatzCoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -616,7 +616,7 @@ void EndoxCoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void EndoxCoinGUI::optionsClicked()
+void KatzCoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -625,14 +625,14 @@ void EndoxCoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void EndoxCoinGUI::aboutClicked()
+void KatzCoinGUI::aboutClicked()
 {
     AboutDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void EndoxCoinGUI::setNumConnections(int count)
+void KatzCoinGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -644,10 +644,10 @@ void EndoxCoinGUI::setNumConnections(int count)
     default: icon = fUseBlackTheme ? ":/icons/black/connect_4" : ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Endox-Coin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Katz-Coin network", "", count));
 }
 
-void EndoxCoinGUI::setNumBlocks(int count)
+void KatzCoinGUI::setNumBlocks(int count)
 {
     QString tooltip;
 
@@ -728,9 +728,9 @@ void EndoxCoinGUI::setNumBlocks(int count)
     statusBar()->setVisible(true);
 }
 
-void EndoxCoinGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
+void KatzCoinGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
 {
-    QString strTitle = tr("Endox-Coin") + " - ";
+    QString strTitle = tr("Katz-Coin") + " - ";
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -774,7 +774,7 @@ void EndoxCoinGUI::message(const QString &title, const QString &message, bool mo
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void EndoxCoinGUI::error(const QString &title, const QString &message, bool modal)
+void KatzCoinGUI::error(const QString &title, const QString &message, bool modal)
 {
     // Report errors from network/worker thread
     if(modal)
@@ -785,7 +785,7 @@ void EndoxCoinGUI::error(const QString &title, const QString &message, bool moda
     }
 }
 
-void EndoxCoinGUI::changeEvent(QEvent *e)
+void KatzCoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -804,7 +804,7 @@ void EndoxCoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void EndoxCoinGUI::closeEvent(QCloseEvent *event)
+void KatzCoinGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -822,21 +822,21 @@ void EndoxCoinGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void EndoxCoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
+void KatzCoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
     if (!clientModel || !clientModel->getOptionsModel())
         return;
 
     QString strMessage = tr("This transaction is over the size limit. You can still send it for a fee of %1, "
         "which goes to the nodes that process your transaction and helps to support the network. "
-        "Do you want to pay the fee?").arg(EndoxCoinUnits::formatWithUnit(clientModel->getOptionsModel()->getDisplayUnit(), nFeeRequired));
+        "Do you want to pay the fee?").arg(KatzCoinUnits::formatWithUnit(clientModel->getOptionsModel()->getDisplayUnit(), nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Confirm transaction fee"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
 
-void EndoxCoinGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
+void KatzCoinGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
 {
 	// Prevent balloon-spam when initial block download is in progress
     if(!walletModel || !clientModel || clientModel->inInitialBlockDownload() || walletModel->processingQueuedTransactions())
@@ -864,12 +864,12 @@ void EndoxCoinGUI::incomingTransaction(const QModelIndex & parent, int start, in
                              "Type: %3\n"
                              "Address: %4\n")
                           .arg(date)
-                          .arg(EndoxCoinUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
+                          .arg(KatzCoinUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
                           .arg(type)
                           .arg(address), icon);
 }
 
-void EndoxCoinGUI::clearWidgets()
+void KatzCoinGUI::clearWidgets()
 {
     centralStackedWidget->setCurrentWidget(centralStackedWidget->widget(0));
     for(int i = centralStackedWidget->count(); i>0; i--){
@@ -879,7 +879,7 @@ void EndoxCoinGUI::clearWidgets()
     }
 }
 
-void EndoxCoinGUI::gotoMasternodeManagerPage()
+void KatzCoinGUI::gotoMasternodeManagerPage()
 {
     masternodeManagerAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(masternodeManagerPage);
@@ -888,7 +888,7 @@ void EndoxCoinGUI::gotoMasternodeManagerPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void EndoxCoinGUI::gotoBlockBrowser()
+void KatzCoinGUI::gotoBlockBrowser()
 {
     blockAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(blockBrowser);
@@ -897,7 +897,7 @@ void EndoxCoinGUI::gotoBlockBrowser()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void EndoxCoinGUI::gotoOverviewPage()
+void KatzCoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(overviewPage);
@@ -906,7 +906,7 @@ void EndoxCoinGUI::gotoOverviewPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void EndoxCoinGUI::gotoHistoryPage()
+void KatzCoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(transactionsPage);
@@ -916,7 +916,7 @@ void EndoxCoinGUI::gotoHistoryPage()
     connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
 }
 
-void EndoxCoinGUI::gotoAddressBookPage()
+void KatzCoinGUI::gotoAddressBookPage()
 {
     addressBookAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(addressBookPage);
@@ -926,7 +926,7 @@ void EndoxCoinGUI::gotoAddressBookPage()
     connect(exportAction, SIGNAL(triggered()), addressBookPage, SLOT(exportClicked()));
 }
 
-void EndoxCoinGUI::gotoReceiveCoinsPage()
+void KatzCoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(receiveCoinsPage);
@@ -936,7 +936,7 @@ void EndoxCoinGUI::gotoReceiveCoinsPage()
     connect(exportAction, SIGNAL(triggered()), receiveCoinsPage, SLOT(exportClicked()));
 }
 
-void EndoxCoinGUI::gotoSendCoinsPage()
+void KatzCoinGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(sendCoinsPage);
@@ -945,7 +945,7 @@ void EndoxCoinGUI::gotoSendCoinsPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void EndoxCoinGUI::gotoSignMessageTab(QString addr)
+void KatzCoinGUI::gotoSignMessageTab(QString addr)
 {
     // call show() in showTab_SM()
     signVerifyMessageDialog->showTab_SM(true);
@@ -954,7 +954,7 @@ void EndoxCoinGUI::gotoSignMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_SM(addr);
 }
 
-void EndoxCoinGUI::gotoVerifyMessageTab(QString addr)
+void KatzCoinGUI::gotoVerifyMessageTab(QString addr)
 {
     // call show() in showTab_VM()
     signVerifyMessageDialog->showTab_VM(true);
@@ -963,14 +963,14 @@ void EndoxCoinGUI::gotoVerifyMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_VM(addr);
 }
 
-void EndoxCoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void KatzCoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void EndoxCoinGUI::dropEvent(QDropEvent *event)
+void KatzCoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -986,13 +986,13 @@ void EndoxCoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Endox-Coin address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Katz-Coin address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
 }
 
-void EndoxCoinGUI::handleURI(QString strURI)
+void KatzCoinGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (sendCoinsPage->handleURI(strURI))
@@ -1001,10 +1001,10 @@ void EndoxCoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Endox-Coin address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Katz-Coin address or malformed URI parameters."));
 }
 
-void EndoxCoinGUI::setEncryptionStatus(int status)
+void KatzCoinGUI::setEncryptionStatus(int status)
 {
     if(fWalletUnlockStakingOnly)
     {
@@ -1050,7 +1050,7 @@ void EndoxCoinGUI::setEncryptionStatus(int status)
     }
 }
 
-void EndoxCoinGUI::encryptWallet()
+void KatzCoinGUI::encryptWallet()
 {
     if(!walletModel)
         return;
@@ -1062,7 +1062,7 @@ void EndoxCoinGUI::encryptWallet()
     setEncryptionStatus(walletModel->getEncryptionStatus());
 }
 
-void EndoxCoinGUI::backupWallet()
+void KatzCoinGUI::backupWallet()
 {
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
@@ -1073,21 +1073,21 @@ void EndoxCoinGUI::backupWallet()
     }
 }
 
-void EndoxCoinGUI::importPrivateKey()
+void KatzCoinGUI::importPrivateKey()
 {
     ImportPrivateKeyDialog dlg(this);
     dlg.setModel(walletModel->getAddressTableModel());
     dlg.exec();
 }
 
-void EndoxCoinGUI::changePassphrase()
+void KatzCoinGUI::changePassphrase()
 {
     AskPassphraseDialog dlg(AskPassphraseDialog::ChangePass, this);
     dlg.setModel(walletModel);
     dlg.exec();
 }
 
-void EndoxCoinGUI::unlockWallet()
+void KatzCoinGUI::unlockWallet()
 {
     if(!walletModel)
         return;
@@ -1102,7 +1102,7 @@ void EndoxCoinGUI::unlockWallet()
     }
 }
 
-void EndoxCoinGUI::lockWallet()
+void KatzCoinGUI::lockWallet()
 {
     if(!walletModel)
         return;
@@ -1110,7 +1110,7 @@ void EndoxCoinGUI::lockWallet()
     walletModel->setWalletLocked(true);
 }
 
-void EndoxCoinGUI::showNormalIfMinimized(bool fToggleHidden)
+void KatzCoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -1132,12 +1132,12 @@ void EndoxCoinGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void EndoxCoinGUI::toggleHidden()
+void KatzCoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void EndoxCoinGUI::updateWeight()
+void KatzCoinGUI::updateWeight()
 {
     if (!pwalletMain)
         return;
@@ -1153,7 +1153,7 @@ void EndoxCoinGUI::updateWeight()
     nWeight = pwalletMain->GetStakeWeight();
 }
 
-void EndoxCoinGUI::updateStakingIcon()
+void KatzCoinGUI::updateStakingIcon()
 {
     updateWeight();
 
@@ -1204,13 +1204,13 @@ void EndoxCoinGUI::updateStakingIcon()
     }
 }
 
-void EndoxCoinGUI::detectShutdown()
+void KatzCoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
         QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);
 }
 
-void EndoxCoinGUI::showProgress(const QString &title, int nProgress)
+void KatzCoinGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
@@ -1233,21 +1233,21 @@ void EndoxCoinGUI::showProgress(const QString &title, int nProgress)
         progressDialog->setValue(nProgress);
 }
 
-void EndoxCoinGUI::editConfig()
+void KatzCoinGUI::editConfig()
 {
     EditConfigDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void EndoxCoinGUI::editConfigExt()
+void KatzCoinGUI::editConfigExt()
 {
     filesystem::path path = GetConfigFile();
     QString pathString = QString::fromStdString(path.string());
     QDesktopServices::openUrl(QUrl::fromLocalFile(pathString));
 }
 
-void EndoxCoinGUI::openDataDir()
+void KatzCoinGUI::openDataDir()
 {
     filesystem::path path = GetDataDir();
     QString pathString = QString::fromStdString(path.string());

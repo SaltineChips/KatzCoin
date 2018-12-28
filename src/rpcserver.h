@@ -50,7 +50,7 @@ public:
 };
 
 /**
- * EndoxCoin RPC command dispatcher.
+ * KatzCoin RPC command dispatcher.
  */
 class CRPCTable
 {

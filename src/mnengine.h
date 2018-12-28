@@ -17,7 +17,7 @@ class CTxIn;
 class CMNenginePool;
 class CMNengineSigner;
 class CMasterNodeVote;
-class CEndoxCoinAddress;
+class CKatzCoinAddress;
 class CMNengineQueue;
 class CMNengineBroadcastTx;
 class CActiveMasternode;
@@ -237,7 +237,7 @@ public:
 class CMNengineSigner
 {
 public:
-    /// Is the inputs associated with this public key? (and there is 10000 ENDOX - checking if valid masternode)
+    /// Is the inputs associated with this public key? (and there is 10000 KATZ - checking if valid masternode)
     bool IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey);
     /// Set the private/public key values, returns true if successful
     bool SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey);

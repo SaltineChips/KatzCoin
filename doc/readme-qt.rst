@@ -1,14 +1,14 @@
-Endox-Coin-qt: Qt5 GUI for Endox-Coin
+Katz-Coin-qt: Qt5 GUI for Katz-Coin
 ===============================
 
 Linux
 -------
-https://github.com/Endox-Coindev/Endox-Coin/blob/master/doc/build-unix.md
+https://github.com/Katz-Coindev/Katz-Coin/blob/master/doc/build-unix.md
 
 Windows
 --------
-https://github.com/Endox-Coindev/Endox-Coin/blob/master/doc/build-msw.md
+https://github.com/Katz-Coindev/Katz-Coin/blob/master/doc/build-msw.md
 
 Mac OS X
 --------
-https://github.com/Endox-Coindev/Endox-Coin/blob/master/doc/build-osx.md
+https://github.com/Katz-Coindev/Katz-Coin/blob/master/doc/build-osx.md

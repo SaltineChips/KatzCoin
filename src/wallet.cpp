@@ -155,7 +155,7 @@ bool CWallet::LoadCScript(const CScript& redeemScript)
      * these. Do not add them to the wallet and warn. */
     if (redeemScript.size() > MAX_SCRIPT_ELEMENT_SIZE)
     {
-        std::string strAddr = CEndoxCoinAddress(redeemScript.GetID()).ToString();
+        std::string strAddr = CKatzCoinAddress(redeemScript.GetID()).ToString();
         LogPrintf("%s: Warning: This wallet contains a redeemScript of size %u which exceeds maximum size %i thus can never be redeemed. Do not use address %s.\n",
             __func__, redeemScript.size(), MAX_SCRIPT_ELEMENT_SIZE, strAddr);
         return true;
@@ -1131,7 +1131,7 @@ void CWallet::ReacceptWalletTransactions()
                 }
                 if (fUpdated)
                 {
-                    LogPrintf("ReacceptWalletTransactions found spent coin %s ENDOX %s\n", FormatMoney(wtx.GetCredit(ISMINE_ALL)), wtx.GetHash().ToString());
+                    LogPrintf("ReacceptWalletTransactions found spent coin %s KATZ %s\n", FormatMoney(wtx.GetCredit(ISMINE_ALL)), wtx.GetHash().ToString());
                     wtx.MarkDirty();
                     wtx.WriteToDisk();
                 }
@@ -2000,7 +2000,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend, 
                     } else if (coin_type == ONLY_NOT10000IFMN) {
                         strFailReason = _(" Unable to locate enough MNengine non-denominated funds for this transaction.");
                     } else if (coin_type == ONLY_NONDENOMINATED_NOT10000IFMN ) {
-                        strFailReason = _(" Unable to locate enough MNengine non-denominated funds for this transaction that are not equal 1000 ENDOX.");
+                        strFailReason = _(" Unable to locate enough MNengine non-denominated funds for this transaction that are not equal 1000 KATZ.");
                     }
 
                     if(useIX){
@@ -2027,7 +2027,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend, 
                 {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-Endox-Coin-address
+                    // change transaction isn't always pay-to-Katz-Coin-address
                     CScript scriptChange;
 
                     // coin control: send change to custom address
@@ -2306,7 +2306,7 @@ bool CWallet::UnlockStealthAddresses(const CKeyingMaterial& vMasterKeyIn)
             continue;
 
         CKeyID ckid = pubKey.GetID();
-        CEndoxCoinAddress addr(ckid);
+        CKatzCoinAddress addr(ckid);
 
         StealthKeyMetaMap::iterator mi = mapStealthKeyMeta.find(ckid);
         if (mi == mapStealthKeyMeta.end())
@@ -2394,7 +2394,7 @@ bool CWallet::UnlockStealthAddresses(const CKeyingMaterial& vMasterKeyIn)
         if (fDebug)
         {
             CKeyID keyID = cpkT.GetID();
-            CEndoxCoinAddress coinAddress(keyID);
+            CKatzCoinAddress coinAddress(keyID);
             printf("Adding secret to key %s.\n", coinAddress.ToString().c_str());
         };
 
@@ -2594,7 +2594,7 @@ bool CWallet::SendStealthMoneyToDestination(CStealthAddress& sxAddress, int64_t 
 
     CKeyID ckidTo = cpkTo.GetID();
 
-    CEndoxCoinAddress addrTo(ckidTo);
+    CKatzCoinAddress addrTo(ckidTo);
 
     if (SecretToPublicKey(ephem_secret, ephem_pubkey) != 0)
     {
@@ -2611,7 +2611,7 @@ bool CWallet::SendStealthMoneyToDestination(CStealthAddress& sxAddress, int64_t 
 
     std::vector<unsigned char> vchNarr;
 
-    // -- Parse EndoxCoin address
+    // -- Parse KatzCoin address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(addrTo.Get());
 
@@ -2743,7 +2743,7 @@ bool CWallet::FindStealthTransactions(const CTransaction& tx, mapValue_t& mapNar
                     std::vector<uint8_t> vchEmpty;
                     AddCryptedKey(cpkE, vchEmpty);
                     CKeyID keyId = cpkE.GetID();
-                    CEndoxCoinAddress coinAddress(keyId);
+                    CKatzCoinAddress coinAddress(keyId);
                     std::string sLabel = it->Encoded();
                     SetAddressBookName(keyId, sLabel);
 
@@ -2806,7 +2806,7 @@ bool CWallet::FindStealthTransactions(const CTransaction& tx, mapValue_t& mapNar
                     CKeyID keyID = cpkT.GetID();
                     if (fDebug)
                     {
-                        CEndoxCoinAddress coinAddress(keyID);
+                        CKatzCoinAddress coinAddress(keyID);
                         printf("Adding key %s.\n", coinAddress.ToString().c_str());
                     };
 
@@ -3064,7 +3064,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
 
         CTxDestination address1;
         ExtractDestination(payee, address1);
-        CEndoxCoinAddress address2(address1);
+        CKatzCoinAddress address2(address1);
 
         LogPrintf("Masternode payment to %s\n", address2.ToString().c_str());
     }
@@ -3235,7 +3235,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64_t nV
     if (nValue + nTransactionFee > GetBalance())
         return _("Insufficient funds");
 
-    // Parse EndoxCoin address
+    // Parse KatzCoin address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
@@ -3298,7 +3298,7 @@ bool CWallet::SetAddressBookName(const CTxDestination& address, const string& st
                              (fUpdated ? CT_UPDATED : CT_NEW) );
     if (!fFileBacked)
         return false;
-    return CWalletDB(strWalletFile).WriteName(CEndoxCoinAddress(address).ToString(), strName);
+    return CWalletDB(strWalletFile).WriteName(CKatzCoinAddress(address).ToString(), strName);
 }
 
 bool CWallet::DelAddressBookName(const CTxDestination& address)
@@ -3313,8 +3313,8 @@ bool CWallet::DelAddressBookName(const CTxDestination& address)
 
     if (!fFileBacked)
         return false;
-    CWalletDB(strWalletFile).EraseName(CEndoxCoinAddress(address).ToString());
-    return CWalletDB(strWalletFile).EraseName(CEndoxCoinAddress(address).ToString());
+    CWalletDB(strWalletFile).EraseName(CKatzCoinAddress(address).ToString());
+    return CWalletDB(strWalletFile).EraseName(CKatzCoinAddress(address).ToString());
 }
 
 bool CWallet::GetTransaction(const uint256 &hashTx, CWalletTx& wtx)
@@ -3669,7 +3669,7 @@ void CWallet::FixSpentCoins(int& nMismatchFound, int64_t& nBalanceInQuestion, bo
         {
             if (IsMine(pcoin->vout[n]) && pcoin->IsSpent(n) && (txindex.vSpent.size() <= n || txindex.vSpent[n].IsNull()))
             {
-                LogPrintf("FixSpentCoins found lost coin %s ENDOX %s[%d], %s\n",
+                LogPrintf("FixSpentCoins found lost coin %s KATZ %s[%d], %s\n",
                     FormatMoney(pcoin->vout[n].nValue), pcoin->GetHash().ToString(), n, fCheckOnly? "repair not attempted" : "repairing");
                 nMismatchFound++;
                 nBalanceInQuestion += pcoin->vout[n].nValue;
@@ -3681,7 +3681,7 @@ void CWallet::FixSpentCoins(int& nMismatchFound, int64_t& nBalanceInQuestion, bo
             }
             else if (IsMine(pcoin->vout[n]) && !pcoin->IsSpent(n) && (txindex.vSpent.size() > n && !txindex.vSpent[n].IsNull()))
             {
-                LogPrintf("FixSpentCoins found spent coin %s ENDOX %s[%d], %s\n",
+                LogPrintf("FixSpentCoins found spent coin %s KATZ %s[%d], %s\n",
                     FormatMoney(pcoin->vout[n].nValue), pcoin->GetHash().ToString(), n, fCheckOnly? "repair not attempted" : "repairing");
                 nMismatchFound++;
                 nBalanceInQuestion += pcoin->vout[n].nValue;
@@ -3876,7 +3876,7 @@ void CWallet::GetKeyBirthTimes(std::map<CKeyID, int64_t> &mapKeyBirth) const {
         mapKeyBirth[it->first] = it->second->nTime - 7200; // block times can be 2h off
 }
 
-bool CWallet::ImportPrivateKey(CEndoxCoinSecret vchSecret, string strLabel, bool fRescan) {
+bool CWallet::ImportPrivateKey(CKatzCoinSecret vchSecret, string strLabel, bool fRescan) {
     if (fWalletUnlockStakingOnly)
         return false;
 

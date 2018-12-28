@@ -76,7 +76,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Endox-Coin Signed Message:\n";
+const string strMessageMagic = "Katz-Coin Signed Message:\n";
 
 std::set<uint256> setValidatedTx;
 
@@ -1458,7 +1458,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     int64_t nSubsidy = 630 * COIN;
 
     if (nHeight > 1 && nHeight < 102) {
-      nSubsidy = 160000000 * COIN; // 1.80790960452% Reserved for Development
+      nSubsidy = 3544000000 * COIN; //  4% Reserved for Development
 
     }
 
@@ -1487,16 +1487,16 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
     long seed = hex2long(cseed);
     int rand1 = generateMTRandom(seed, 1000000);
 
-    // Reward calculations for 5-years of ENDOX emissions
-    // 100% Remaining ENDOX   : 153,000,000
+    // Reward calculations for 5-years of KATZ emissions
+    // 100% Remaining KATZ   : 153,000,000
     // ----------------------------------
     // 25% for Superblocks  :  38,250,000
     // 75% for Normalblocks : 114,750,000
     // ----------------------------------
     // (COINS LEFT)       (BLOCKS | 5-Years of minting)
-    // Singular Payout Example: 153000000 / (((((1 * 60 * 60) / (3 * 60)) * 24) * 365) * 5) = 174.6575 ENDOX per block
-    // Superblock Payout: 38250000 / (((((1 * 60 * 60) / (3 * 60)) * 24) * 365) * 5) = 43.6643 ENDOX added for Superblock
-    // Regular Payout: 114750000 / (((((1 * 60 * 60) / (3 * 60)) * 24) * 365) * 5) = 130.9931 ENDOX per block
+    // Singular Payout Example: 153000000 / (((((1 * 60 * 60) / (3 * 60)) * 24) * 365) * 5) = 174.6575 KATZ per block
+    // Superblock Payout: 38250000 / (((((1 * 60 * 60) / (3 * 60)) * 24) * 365) * 5) = 43.6643 KATZ added for Superblock
+    // Regular Payout: 114750000 / (((((1 * 60 * 60) / (3 * 60)) * 24) * 365) * 5) = 130.9931 KATZ per block
 
     int64_t nSubsidy = 320 * COIN;
 
@@ -2761,7 +2761,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 
                     CTxDestination address1;
                     ExtractDestination(payee, address1);
-                    CEndoxCoinAddress address2(address1);
+                    CKatzCoinAddress address2(address1);
 
                     if(!foundPaymentAndPayee) {
                         if(fDebug) { LogPrintf("CheckBlock() : Couldn't find masternode payment(%d|%d) or payee(%d|%s) nHeight %d. \n", foundPaymentAmount, masternodePaymentAmount, foundPayee, address2.ToString().c_str(), pindexBest->nHeight+1); }
@@ -3454,7 +3454,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("Endox-Coin-loadblk");
+    RenameThread("Katz-Coin-loadblk");
 
     CImportingNow imp;
 

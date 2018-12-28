@@ -10,7 +10,7 @@
 #include <QApplication>
 #include <qmath.h> // for qPow()
 
-EndoxCoinAmountField::EndoxCoinAmountField(QWidget *parent):
+KatzCoinAmountField::KatzCoinAmountField(QWidget *parent):
         QWidget(parent), amount(0), currentUnit(-1)
 {
     amount = new QDoubleSpinBox(this);
@@ -23,7 +23,7 @@ EndoxCoinAmountField::EndoxCoinAmountField(QWidget *parent):
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new EndoxCoinUnits(this));
+    unit->setModel(new KatzCoinUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -41,7 +41,7 @@ EndoxCoinAmountField::EndoxCoinAmountField(QWidget *parent):
     unitChanged(unit->currentIndex());
 }
 
-void EndoxCoinAmountField::setText(const QString &text)
+void KatzCoinAmountField::setText(const QString &text)
 {
     if (text.isEmpty())
         amount->clear();
@@ -49,18 +49,18 @@ void EndoxCoinAmountField::setText(const QString &text)
         amount->setValue(text.toDouble());
 }
 
-void EndoxCoinAmountField::clear()
+void KatzCoinAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-bool EndoxCoinAmountField::validate()
+bool KatzCoinAmountField::validate()
 {
     bool valid = true;
     if (amount->value() == 0.0)
         valid = false;
-    if (valid && !EndoxCoinUnits::parse(currentUnit, text(), 0))
+    if (valid && !KatzCoinUnits::parse(currentUnit, text(), 0))
         valid = false;
 
     setValid(valid);
@@ -68,7 +68,7 @@ bool EndoxCoinAmountField::validate()
     return valid;
 }
 
-void EndoxCoinAmountField::setValid(bool valid)
+void KatzCoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -76,7 +76,7 @@ void EndoxCoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-QString EndoxCoinAmountField::text() const
+QString KatzCoinAmountField::text() const
 {
     if (amount->text().isEmpty())
         return QString();
@@ -84,7 +84,7 @@ QString EndoxCoinAmountField::text() const
         return amount->text();
 }
 
-bool EndoxCoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool KatzCoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -105,16 +105,16 @@ bool EndoxCoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *EndoxCoinAmountField::setupTabChain(QWidget *prev)
+QWidget *KatzCoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     return amount;
 }
 
-CAmount EndoxCoinAmountField::value(bool *valid_out) const
+CAmount KatzCoinAmountField::value(bool *valid_out) const
 {
     CAmount val_out = 0;
-    bool valid = EndoxCoinUnits::parse(currentUnit, text(), &val_out);
+    bool valid = KatzCoinUnits::parse(currentUnit, text(), &val_out);
     if(valid_out)
     {
         *valid_out = valid;
@@ -122,18 +122,18 @@ CAmount EndoxCoinAmountField::value(bool *valid_out) const
     return val_out;
 }
 
-void EndoxCoinAmountField::setValue(const CAmount& value)
+void KatzCoinAmountField::setValue(const CAmount& value)
 {
-    setText(EndoxCoinUnits::format(currentUnit, value));
+    setText(KatzCoinUnits::format(currentUnit, value));
 }
 
-void EndoxCoinAmountField::unitChanged(int idx)
+void KatzCoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, EndoxCoinUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, KatzCoinUnits::UnitRole).toInt();
 
     // Parse current value and convert to new unit
     bool valid = false;
@@ -142,8 +142,8 @@ void EndoxCoinAmountField::unitChanged(int idx)
     currentUnit = newUnit;
 
     // Set max length after retrieving the value, to prevent truncation
-    amount->setDecimals(EndoxCoinUnits::decimals(currentUnit));
-    amount->setMaximum(qPow(10, EndoxCoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
+    amount->setDecimals(KatzCoinUnits::decimals(currentUnit));
+    amount->setMaximum(qPow(10, KatzCoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
 
     if(valid)
     {
@@ -158,7 +158,7 @@ void EndoxCoinAmountField::unitChanged(int idx)
     setValid(true);
 }
 
-void EndoxCoinAmountField::setDisplayUnit(int newUnit)
+void KatzCoinAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }
